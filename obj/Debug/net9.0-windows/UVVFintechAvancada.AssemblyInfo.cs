@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UVVFintechAvancada")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70b90e53a0e74290ba5c65b587a703c1073b0daa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00fb39bbe55d4748df3523b925d0d703cccba2f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("UVVFintechAvancada")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UVVFintechAvancada")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

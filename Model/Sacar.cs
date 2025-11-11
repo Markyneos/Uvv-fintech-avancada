@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UVVFintechAvancada.Model
 {
-    internal class Sacar : ITransacao
+    public class Sacar : ITransacao
     {
         private DateTime _dataHora;
         public DateTime DataHora { get => _dataHora; }

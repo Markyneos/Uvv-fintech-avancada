@@ -7,7 +7,7 @@ using System.Transactions;
 
 namespace UVVFintechAvancada.Model
 {
-    public abstract class Conta(Cliente dono, string senha)
+    public abstract class Conta(Cliente dono, string senha, Banco banco, int idBanco)
     {
         private int _id;
         public int Id { get { return _id; } }
@@ -16,6 +16,8 @@ namespace UVVFintechAvancada.Model
         private double _saldo = 0;
         public double Saldo { get { return _saldo; } set { _saldo = value; } }
         public Cliente Dono = dono;
+        public Banco Banco = banco;
+        public int IdBanco = idBanco;
 
         public abstract void AplicarRendimento();
         public bool Sacar(double valor)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UVVFintechAvancada.Model
 {
-    internal class GerenciadorDeContas(Banco bancoGerenciador, int bancoId)
+    public class GerenciadorDeContas(Banco bancoGerenciador, int bancoId)
     {
         public enum TipoDeConta
         {
@@ -19,7 +19,7 @@ namespace UVVFintechAvancada.Model
         public Banco BancoGerenciador { get => _bancoGerenciador; }
         public List<Conta> Contas = new();
 
-        public void DeletarConta(Conta c, int contaId)
+        public void DeletarConta(Conta c)
         {
             Contas.Remove(c);
         }
@@ -32,6 +32,9 @@ namespace UVVFintechAvancada.Model
                     break;
                 case TipoDeConta.Corrente:
                     Contas.Add(new Corrente(dono, senha));
+                    break;
+                default:
+                    Console.WriteLine("ERRO: Deve-se inserir as opções de conta: 'Corrente' ou 'Poupanca'");
                     break;
             }
         }

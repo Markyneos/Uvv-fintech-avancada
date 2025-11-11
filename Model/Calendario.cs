@@ -1,6 +1,6 @@
 ﻿namespace UVVFintechAvancada.Model
 {
-    class Calendario
+    public class Calendario
     {
         private int _id;
         public int Id { get { return _id; } }

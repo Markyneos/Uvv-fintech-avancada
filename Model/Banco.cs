@@ -6,14 +6,27 @@ using System.Threading.Tasks;
 
 namespace UVVFintechAvancada.Model
 {
-    internal class Banco(string nome)
+    public class Banco(string nome, GerenciadorDeClientes gCliente, GerenciadorDeContas gConta, GerenciadorDeTransacoesBanco gTransacao)
     {
         private int _id;
         public int Id { get => _id; }
         public string Nome = nome;
         public Calendario? Agenda { get; set; }
-        public GerenciadorDeClientes GClientes { get; set; }
-        public GerenciadorDeContas GContas { get; set; }
-        public GerenciadorDeTransacoes GTransacoes { get; set; }
+        public GerenciadorDeClientes? GClientes { get; set; } = gCliente;
+        public GerenciadorDeContas? GContas { get; set; } = gConta;
+        public GerenciadorDeTransacoesBanco? GTransacoes { get; set; } = gTransacao;
+
+        public void AdicionarCompromisso(string nome, string descricao, DateTime dataHora)
+        {
+            if (Agenda != null)
+            {
+                Agenda.AdicionarCompromisso(new Compromisso(nome, descricao, dataHora, Agenda));
+            }
+            else
+            {
+                Agenda = new Calendario();
+                Agenda.AdicionarCompromisso(new Compromisso(nome, descricao, dataHora, Agenda));
+            }
+        }
     }
 }

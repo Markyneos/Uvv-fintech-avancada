@@ -7,15 +7,11 @@ using System.Threading.Tasks;
 
 namespace UVVFintechAvancada.Model
 {
-    internal class Poupanca : Conta
+    public class Poupanca(Cliente dono, string senha, Banco banco, int idBanco) : Conta(dono, senha, banco, idBanco)
     {
         private static double _taxaDeRendimento = 0.0055;
 
-        public Poupanca(Cliente dono, string senha) : base(dono, senha)
-        {
-        }
-
-        public double TaxaDeRendiento { get => _taxaDeRendimento; set { _taxaDeRendimento = value; } }
+        public double TaxaDeRendimento { get => _taxaDeRendimento; set { _taxaDeRendimento = value; } }
         public override void AplicarRendimento()
         {
             base.Saldo += base.Saldo * _taxaDeRendimento;
