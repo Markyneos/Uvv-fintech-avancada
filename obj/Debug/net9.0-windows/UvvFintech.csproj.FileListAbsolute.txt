@@ -1,0 +1,4 @@
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\MainWindow.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\App.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\UvvFintech_MarkupCompile.cache
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\UvvFintech_MarkupCompile.lref
